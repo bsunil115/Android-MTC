@@ -1,0 +1,29 @@
+<resources>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="app_name">My mtc</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example"></string>
+
+    <string name="action_settings">Settings</string>
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="option">
+        <item >Home</item>
+        <item >Ganges</item>
+        <item >Kaveri</item>
+        <item >Godavari</item>
+        <item >Periyar</item>
+        <item >Bharathappuzha (Nila)</item>
+        <item >Yamuna</item>
+    </string-array>
+</resources>

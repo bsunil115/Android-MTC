@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_element"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fd000000"
+    android:orientation="vertical"
+    android:padding="10sp"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:text="Hello!"
+        android:textColor="#ffff0525"
+        android:textSize="@dimen/abc_action_bar_stacked_max_height" />
+
+    <ImageView
+        android:layout_width="209dp"
+        android:layout_height="186dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/btn_close_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:text="Close" />
+
+</LinearLayout>
+

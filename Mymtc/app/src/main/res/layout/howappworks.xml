@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<!-- Side navigation drawer UI -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/nn"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:text="HOW APP WORKS"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.49"
+        android:textSize="@android:dimen/notification_large_icon_width" />
+</LinearLayout>
+
+
+

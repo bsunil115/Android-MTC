@@ -1,0 +1,14 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffb128"
+    android:textColor="#0f19ff"
+    android:paddingBottom="25dp"
+    android:textSize="@dimen/abc_action_bar_icon_vertical_padding_material"
+    android:textColorHighlight="#02fbff38"
+    android:textIsSelectable="false"
+    android:textAlignment="center"
+
+    />
