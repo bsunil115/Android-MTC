@@ -23,10 +23,10 @@ public class HomeFragment extends android.app.Fragment {
         //mainlayout.setVisibility(RelativeLayout.GONE);
        // String[] postion1= getResources().getStringArray(R.array.option);
        View rootView = inflater.inflate(R.layout.activity_main, container, false);
-      TextView tv = (TextView) rootView.findViewById(R.id.tv);
+    //  TextView tv = (TextView) rootView.findViewById(R.id.tv);
 
         // Setting currently selected river name in the TextView
-     tv.setText("Home");
+   //  tv.setText("Home");
 
         // Updating the action bar title
        // getSupportActionBar().setTitle(mActivityTitle);

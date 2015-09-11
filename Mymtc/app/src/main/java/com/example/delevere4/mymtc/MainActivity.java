@@ -16,8 +16,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -51,11 +55,17 @@ public class MainActivity extends ActionBarActivity {
     private CharSequence mTitle;
     Fragment fragment1;
     private RelativeLayout mainlayout;
+    private ImageView frameAnimation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        this.frameAnimation = (ImageView) findViewById(R.id.imageView);
+        Animation rotate = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotate);
+        
+        rotate.setRepeatCount(100);
+        // Begin the rotate animation!
+       frameAnimation.startAnimation(rotate);
         fragment1 = new HomeFragment();
         mDrawerList = (ListView)findViewById(R.id.navList);mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
@@ -77,7 +87,7 @@ public class MainActivity extends ActionBarActivity {
     }
     private void addDrawerItems() {
 
-        String[] osArray = { "Home", "Search Bus", "Bus Details", "How App works", "Spot" };
+        String[] osArray = { "Home", "Search Bus", "Bus Details",  "Spot","live" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
 
@@ -86,7 +96,7 @@ public class MainActivity extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = (String) mDrawerList.getAdapter().getItem(position);
 
-               displayView(position);
+                displayView(position);
                 Toast.makeText(MainActivity.this, item+" selected"
                         , Toast.LENGTH_SHORT).show();
             }
@@ -120,6 +130,9 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case 4:
                 fragment = new SpotFragment();
+                break;
+            case 5:
+                fragment = new LiveFragment();
                 break;
 
 
@@ -155,7 +168,7 @@ public class MainActivity extends ActionBarActivity {
             /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-               // getSupportActionBar().setTitle("");
+                // getSupportActionBar().setTitle("");
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 
